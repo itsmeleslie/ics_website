@@ -27,13 +27,13 @@ $(document).ready(function(){
   $.ajax({
     type: "GET",
     url: "https://students.ics.uci.edu/~chulm/myProxy.php?https://divvy.com/stations/json",
+    async: false,
+    jsonpCallback: 'jsonCallback',
     dataType: "json",
     contentType: "application/json",
     success: function(json){
       handle_data(json, "stationBeanList", "#info");
       
-    },
-    error: function(json){
     }
   });
 })
