@@ -20,7 +20,7 @@ $(document).ready(function(){
     if(numOfBikes<=3){
       properties["icon"] = {
         path: google.maps.SymbolPath.CIRCLE,
-        scale: 8
+        scale: 10
       }
     }
     var marker = new google.maps.Marker(properties);
