@@ -1,0 +1,136 @@
+<HEAD>
+<TITLE>Divvy Bikes - Chicago</TITLE>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM32K6b5-AfFgoaUce_FF-eKPLYfG8HHI">
+</script>
+<script type="text/javascript" src="script.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<style type="text/css">
+      html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
+    </style>
+    
+    <script type="text/javascript">
+    </script>
+</HEAD>
+<BODY>
+<div class="container">
+	<div class='page-header'>
+		<h1>
+			Divvy Bikes 
+			<small>
+				Chicago
+			</small>
+		</h1>
+	</div>
+	<p class='alert alert-info'>
+		Divvy bike stations and their statuses throughout Chicago, IL.
+	</p>
+	<table class='table'>
+		<thead>
+			<tr>
+				<th>
+					<div class ='col-md-6'>
+						Source URL
+					</div>
+					<div class ='col-md-6'>
+						Description
+					</div>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<div class='col-md-6'>
+						<a href="https://www.divvybikes.com/stations/json" target="_blank">https://www.divvybikes.com/stations/json</a>
+					</div>
+					<div class='col-md-6'>
+						Divvy bike stations' information in Chicago.
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class='col-md-6'>
+						<a href="http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.quakeml" target="_blank">http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.quakeml</a>
+					</div>
+					<div class='col-md-6'>
+						All earthquakes in the past hour updated every 5 minutes.
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class='col-md-6'>
+						<a href="http://w1.weather.gov/xml/current_obs/index.xml" target="_blank">http://w1.weather.gov/xml/current_obs/index.xml</a>
+					</div>
+					<div class='col-md-6'>
+						NOAA's National Weather Service Stations
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class='col-md-6'>
+						<a href="http://www.ucishuttles.com/Route/317/vehicles" target="_blank">http://www.ucishuttles.com/Route/317/vehicles</a>
+					</div>
+					<div class='col-md-6'>
+						UCI Anteater Express Shuttle 317 current locations.
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class='col-md-6'>
+						<a href="http://www.yelp.com/search/snippet?find_desc=target&find_loc=Irvine%2C%20CA&open_now=5622&parent_request_id=a113c64139240aa8&request_origin=hash&bookmark=true" target="_blank">http://www.yelp.com/search/snippet?find_desc=target&find_loc=Irvine%2C%20CA&open_now=5622&parent_request_id=a113c64139240aa8&request_origin=hash&bookmark=true</a>
+					</div>
+					<div class='col-md-6'>
+						Yelp search for currently open Targets in Irvine, CA.
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div id="map-canvas" class='col-xs-6'></div>
+	<div class='col-xs-6'>
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th>
+						<div class="col-md-2">
+							Status
+						</div>
+						<div class="col-md-4">
+							Stations
+						</div>
+						<div class="col-md-2">
+							Available Bikes
+						</div>
+						<div class="col-md-2">
+							Available Docks
+						</div>
+					</th>
+				</tr>	
+			</thead>
+		</table>
+
+		<div style='max-height: 500px; overflow-y: auto;'>
+			<table class='table'>
+				<tbody id="info">
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+</BODY>
