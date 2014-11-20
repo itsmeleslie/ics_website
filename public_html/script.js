@@ -51,9 +51,9 @@ $(document).ready(function(){
       set_marker(station.latitude, station.longitude, station.stationName, station.availableBikes);
           
     }
-  $(".oreo").click(function(button){
-    var lat = $(button).data("lat");
-    var lng = $(button).data("lng");
+  $(".oreo").click(function(event){
+    var lat = $(event.currentTarget).data("lat");
+    var lng = $(event.currentTarget).data("lng");
     map.setCenter({lat: lat, lng: lng});
     map.setZoom(16);
   });
