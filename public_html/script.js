@@ -29,7 +29,7 @@ $(document).ready(function(){
   
 
   window.handle_data = function(my_data, where_it_is, destination){
-    
+    $(destination).empty();
     
     for (var i = 0; i < my_data[where_it_is].length; i++) { 
       var station = my_data[where_it_is][i];
@@ -41,7 +41,7 @@ $(document).ready(function(){
         "<tr>" +
           "<td>" +
             "<div class='col-md-2'><label class='label " + labelclass + "'>" + station.statusValue + "</label></div>" +
-            "<div class='col-md-4'>" + "<a class='oreo' data-lat='" + station.latitude + "' data-long='" + station.longitude + "'>" + station.stationName + "</a>" + "</div>" + 
+            "<div class='col-md-4'>" + "<a class='oreo' style='cursor:pointer;' data-lat='" + station.latitude + "' data-long='" + station.longitude + "'>" + station.stationName + "</a>" + "</div>" + 
             "<div class='col-md-2'>" + station.availableBikes + "</div>" + 
             "<div class='col-md-2'>" + station.availableDocks + "</div>" +
           "</td>" +
