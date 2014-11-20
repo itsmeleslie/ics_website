@@ -12,19 +12,17 @@ $(document).ready(function(){
   window.set_marker = function(lat, lng, stationName, numOfBikes) {
     var latLng = new google.maps.LatLng(lat,lng);
     var fillColor = 'green';
-    if(numOfBikes<=3){
-      fillColor = 'red';
-    }
-    var marker = new google.maps.Marker({
+    var properties = {
       position: latLng,
       map: map,
-      title: stationName,
-      icon: {
-        path: google.maps.SymbolPath.CIRCLE,
-        scale: 10,
-        fillColor: fillColor
-        }
-    });
+      title: stationName
+    };
+    if(numOfBikes<=3){
+      properties["icon"] = {
+        path: google.maps.SymbolPath.CIRCLE
+      }
+    }
+    var marker = new google.maps.Marker(properties);
   }
 
   
@@ -53,7 +51,7 @@ $(document).ready(function(){
     }
   $(".oreo").click(function(event){
     var lat = $(event.currentTarget).data("lat");
-    var lng = $(event.currentTarget).data("lng");
+    var lng = $(event.currentTarget).data("long");
     map.setCenter({lat: lat, lng: lng});
     map.setZoom(16);
   });
