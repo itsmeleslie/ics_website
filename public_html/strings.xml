@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">inf133</string>
+    <string name="xaxis_label">axisX value:</string>
+    <string name="yaxis_label">axisY value:</string>
+    <string name="zaxis_label">axisZ value:</string>
+    <string name="action_settings">Settings</string>
+
+</resources>
