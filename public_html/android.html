@@ -1,0 +1,60 @@
+<HEAD>
+<TITLE>Android Orientation Music Player App</TITLE>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<style type="text/css">
+      html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
+    </style>
+    
+    <script type="text/javascript">
+    </script>
+</HEAD>
+<BODY>
+<div class="container">
+	<div class='page-header'>
+		<h1>
+			Android Orientation Music Player App 
+			<small>
+				Informatics 133
+			</small>
+		</h1>
+	</div>
+</div>
+<iframe width="560" height="315" src="//www.youtube.com/embed/T_USZolcd3I" frameborder="0" allowfullscreen></iframe>
+
+<div class="container">
+	<h2>
+		Group Member(s):
+	</h2>
+	<h3>
+		Leslie Chu #27961857
+	</h3>
+	<p>
+		Created the whole project from beginning to end. This includes building the program and implementing the ability to play sounds, sense the device's orientation, and creating the logic that plays certain sounds given certain orientations sensed. I also edited the short song clips used in the application and filmed and edited the final video demonstrating the functionality of the android app.
+	</p>
+	<h2>
+		Description of Components of the System:
+	</h2>
+	<p>
+		There are a few components that make up my Android application. To start off, I decided to use the magnetic field sensor to give me the phone’s orientation data. I had started with using the gyroscope sensor before concluding that it was not the best fit in terms of what it’s built for and then tried implementing the gravity sensor. For some unusual reason, the gravity sensor was not feeding back information. 
+
+		Another component that I used was the media player API. I took my five audio clips and moved them into a designated folder within the project package and then called upon each depending on the orientation of the phone that I chose.
+
+		Another component I found that was great was the runOnUiThread method. It makes sure all the UI actions are in one thread so that the UI is made up of components running in a sequential and continuous flow.
+
+		The user interface is made up of three text views and three edit texts. I wanted the application to show the information that the gyroscope sensor was getting in real-time so the user can be aware of any possible discrepancies or offsets depending on their location. The user interface shows the x-axis, y-axis, and z-axis.
+
+		Lastly, another component to the system is the one that controls playing the audio. If audio is already playing, it does nothing. If no audio is playing, then it can go ahead and call the audio for the current orientation registered.
+	</p>
+</div>
+
+
+</BODY>
